@@ -113,17 +113,17 @@ $flowers = file('du_lieu/hoa.txt');
         foreach ($flowers as $flower) {
           if (strstr(explode("|", $flower)[0], "*") == $id) echo
             "<div style='display: flex; justify-content: center; width: 70%; padding:5px; border: 3px #fefefe solid; box-shadow: inset 0 0 2px 0px #000'>
-        <div><img src='/BT2-PHP/hinh_anh/" . explode("|", $flower)[4] . "' alt='" . explode("|", $flower)[2] . "' /></div>
-        <div align='left' style='padding-left: 10px'>
-          <h2>" . explode("|", $flower)[2] . "</h2>
-          <p><i>Giá bán: </i>" . number_format(explode("|", $flower)[3], 0, "", ",") . " VNĐ</p>
-          <p>
-            <i>Thành phần chính:</i>
-            <br>
-            " . explode("|", $flower)[5] . "</p>
-          <p><a href='index.php'>Quay về trang chính</a></p>
-        </div>
-        </div>";
+              <div><img src='/BT2-PHP/hinh_anh/" . explode("|", $flower)[4] . "' alt='" . explode("|", $flower)[2] . "' /></div>
+              <div align='left' style='padding-left: 10px'>
+                <h2>" . explode("|", $flower)[2] . "</h2>
+                <p><i>Giá bán: </i>" . number_format(explode("|", $flower)[3], 0, "", ",") . " VNĐ</p>
+                <p>
+                  <i>Thành phần chính:</i>
+                  <br>
+                  " . explode("|", $flower)[5] . "</p>
+                <p><a href='index.php'>Quay về trang chính</a></p>
+              </div>
+            </div>";
         }
         ?>
       </td>
