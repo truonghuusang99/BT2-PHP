@@ -75,7 +75,7 @@
       </td>
       <td width="27%" valign="top">
         <table width="100%" border="0" cellpadding="0" cellspacing="2">
-          <form id="form1" name="form1" method="post" action="trang_1.php">
+          <form id="form1" name="form1" method="post" action="index.php">
             <tr>
               <td colspan="2">
                 <div align="center" class="style5"> Đăng nhập</div>
@@ -144,7 +144,7 @@
     <td colspan="3" valign="top" background="hinh_anh/nen.jpg">
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr align="center" class="style10" bgcolor="#CCFFCC">
-          <td width="25%" height="23" bgcolor="#CCFFCC"><strong><a href="trang_1.php"><strong>Trang chủ</strong></a></td>
+          <td width="25%" height="23" bgcolor="#CCFFCC"><strong><a href="index.php"><strong>Trang chủ</strong></a></td>
           <td width="25%"><strong><a href="trang_2.php"><strong>Tìm kiếm bó hoa</strong></a></td>
           <td width="28%"><strong><a href="trang_3.php"><strong>Thêm bó hoa mới</strong></a></td>
           <td width="22%"><strong><a href="trang_dang_ky.php">Đăng ký mới</a></strong></td>
@@ -186,7 +186,7 @@
         foreach ($read as $flower) {
           echo "<div align='center' title='" . explode('|', $flower)[2] . "'>
           <img src='/BT2-PHP/hinh_anh/" . explode('|', $flower)[4] . "' alt='" . explode('|', $flower)[2] . "'>
-          <div><a href='#'><b>" . explode('|', $flower)[2] . "</b></a> <img src='/BT2-PHP/hinh_anh/gio_hang.jpg' width='30' height='30' alt='cart'></div>
+          <div><a href='trang_chi_tiet_hoa.php?id=" . strstr(explode("|", $flower)[0], "*") . "'><b>" . explode('|', $flower)[2] . "</b></a> <img src='/BT2-PHP/hinh_anh/gio_hang.jpg' width='30' height='30' alt='cart'></div>
           <div><i>Giá bán: </i>" . number_format(explode("|", $flower)[3], 0, ".", ",") . " VNĐ</div>
         </div>";
         }
