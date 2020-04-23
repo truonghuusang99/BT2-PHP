@@ -163,7 +163,7 @@
                   <?php
                   $read = file('du_lieu/loai.txt');
                   foreach ($read as $line) {
-                    echo "<a href='#'>" .explode("|",$line)[1]. "</a><br>";
+                    echo "<a href='#'>" . explode("|", $line)[1] . "</a><br>";
                   }
                   ?>
                 </td>
@@ -180,7 +180,19 @@
       </table>
     </td>
     <td colspan="3" valign="top" bgcolor="#FFFFFF">
-      (viết code hiển thị các bó hoa)</td>
+      <div style="display: grid; grid-template-columns: auto auto auto">
+        <?php
+        $read = file('du_lieu/hoa.txt');
+        foreach ($read as $flower) {
+          echo "<div align='center' title='" . explode('|', $flower)[2] . "'>
+          <img src='/BT2-PHP/hinh_anh/" . explode('|', $flower)[4] . "' alt='" . explode('|', $flower)[2] . "'>
+          <div><a href='#'><b>" . explode('|', $flower)[2] . "</b></a> <img src='/BT2-PHP/hinh_anh/gio_hang.jpg' width='30' height='30' alt='cart'></div>
+          <div><i>Giá bán: </i>" . number_format(explode("|", $flower)[3], 0, ".", ",") . " VNĐ</div>
+        </div>";
+        }
+        ?>
+      </div>
+    </td>
   </tr>
   <tr>
     <td valign="top" bgcolor="#d3f4ce"><span class="style2">Copyright &copy;2003-2007 <br />
